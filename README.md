@@ -70,3 +70,29 @@ public record EncryptedRecord(long Id, string EncryptedPayload, int ProcessedByT
 
 ## 🚀 روال اجرا
 کلاس `TransactionEngine` را پیاده‌سازی کرده و پس از اطمینان از کامپایل بدون خطای پروژه، تغییرات خود را در قالب یک Pull Request ارسال کنید.
+
+## 🧪 اجرای نمونه کنسولی
+
+برای مشاهده منوی تعاملی برنامه، دستور زیر را در ریشه مخزن اجرا کنید:
+
+```powershell
+dotnet run --project HighScalePaymentEngine.Console
+```
+
+برای اجرای خودکار تمام سناریوها بدون نمایش منو:
+
+```powershell
+dotnet run --project HighScalePaymentEngine.Console -- all
+```
+
+هر سناریو را می‌توان به‌صورت مستقل نیز اجرا کرد:
+
+```powershell
+dotnet run --project HighScalePaymentEngine.Console -- watchdog
+dotnet run --project HighScalePaymentEngine.Console -- batch
+dotnet run --project HighScalePaymentEngine.Console -- risk
+dotnet run --project HighScalePaymentEngine.Console -- confirmation
+dotnet run --project HighScalePaymentEngine.Console -- encryption
+```
+
+برای لغو اجرای یک سناریو از `Ctrl+C` استفاده کنید.
